@@ -1,12 +1,3 @@
-// Global types for MediaPipe loaded via script tags
-export interface Window {
-  Hands: any;
-  Camera: any;
-  drawConnectors: any;
-  drawLandmarks: any;
-  HAND_CONNECTIONS: any;
-}
-
 export enum ShapeType {
   SPHERE = 'SPHERE',
   TEXT = 'TEXT',
@@ -27,3 +18,14 @@ export interface HandData {
 }
 
 export type GestureType = ShapeType | 'UNKNOWN';
+
+// Global augmentation
+declare global {
+  interface Window {
+    Hands: any;
+    Camera: any;
+    drawConnectors: any;
+    drawLandmarks: any;
+    HAND_CONNECTIONS: any;
+  }
+}

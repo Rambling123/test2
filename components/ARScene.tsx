@@ -3,9 +3,6 @@ import * as THREE from 'three';
 import { ShapeType, GestureType } from '../types';
 import { generateShapePositions } from '../utils/shapeGenerator';
 
-// Access global MediaPipe objects
-declare const window: any;
-
 const MAX_PARTICLES = 16000;
 
 // Mapping for Chinese Display
