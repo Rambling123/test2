@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ARScene } from './components/ARScene';
 
 export default function App() {

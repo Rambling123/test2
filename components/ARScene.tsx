@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import * as THREE from 'three';
-import { ShapeType, HandData, GestureType } from '../types';
+import { ShapeType, GestureType } from '../types';
 import { generateShapePositions } from '../utils/shapeGenerator';
 
 // Access global MediaPipe objects

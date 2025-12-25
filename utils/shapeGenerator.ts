@@ -66,20 +66,7 @@ export const generateShapePositions = (type: ShapeType): Float32Array => {
       }
       case ShapeType.HEART: {
         // 3D Heart formula
-        // x = 16sin^3(t)
-        // y = 13cos(t) - 5cos(2t) - 2cos(3t) - cos(4t)
-        // Rotate around Y to make 3D volume
-        let t = Math.random() * Math.PI * 2;
-        // Distribute points inside the volume
         const scale = 0.25; 
-        
-        // Base 2D heart curve
-        let hx = 16 * Math.pow(Math.sin(t), 3);
-        let hy = 13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t);
-        
-        // Extrude/Volume logic: randomize radius from center axis to the curve
-        const rMax = Math.abs(hx); 
-        const rCurrent = Math.random() * rMax; // Fill the inside
         
         // We need to re-map this to 3D. 
         // Let's use a simpler parametric volume approach for stability
