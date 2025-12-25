@@ -68,9 +68,6 @@ export const generateShapePositions = (type: ShapeType): Float32Array => {
         // 3D Heart formula
         const scale = 0.25; 
         
-        // We need to re-map this to 3D. 
-        // Let's use a simpler parametric volume approach for stability
-        // Spherical coords modification
         const theta = Math.random() * Math.PI * 2;
         const phi = Math.random() * Math.PI;
         
