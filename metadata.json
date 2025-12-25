@@ -1,0 +1,7 @@
+{
+  "name": "Mok AR 粒子系统",
+  "description": "基于 Three.js 和 MediaPipe 的高性能 WebAR 体验。包含 16,000 个交互式流体粒子，支持手势识别变形、风力物理效果和深度缩放。",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
