@@ -1,6 +1,7 @@
 {
   "name": "mok-ar-particles",
   "version": "1.0.0",
+  "type": "module",
   "description": "Mok AR Particle System",
   "scripts": {
     "dev": "vite",

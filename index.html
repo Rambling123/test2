@@ -4,19 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Mok AR 粒子特效</title>
-    <!-- Tailwind CSS (CDN kept for simplicity in this setup, though standard Vite setup can also import it) -->
-    <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- MediaPipe Dependencies via Unpkg (Keep using CDN as requested to avoid large WASM bundler issues) -->
+    <!-- MediaPipe Dependencies via Unpkg -->
+    <!-- Note: crossorigin="anonymous" is crucial for COOP/COEP security policies -->
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
     
     <style>
-      body { margin: 0; overflow: hidden; background-color: #000; touch-action: none; }
-      #root { position: relative; width: 100vw; height: 100vh; }
-      video { transform: scaleX(-1); object-fit: cover; } /* Mirror camera */
+      /* Basic resets handled by Tailwind now, keeping mirror logic */
+      video { transform: scaleX(-1); object-fit: cover; }
     </style>
   <script type="importmap">
 {
@@ -25,8 +23,8 @@
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/",
     "three": "https://esm.sh/three@^0.182.0",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
-    "vite": "https://esm.sh/vite@^7.3.0"
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>
